@@ -87,22 +87,30 @@ class AIFilter:
             "stream": False,
             "options": {
                 "temperature": 0.1,  # 低温度，提高判断一致性
-                "num_predict": 200,
+                "num_predict": 4096,  # qwen3.5思考模式需要足够token（thinking+content）
             },
         }
 
         resp = requests.post(
             self.api_url,
             json=payload,
-            timeout=self.timeout,
+            timeout=self.timeout + 60,  # qwen思考模式需要更长时间
         )
         resp.raise_for_status()
 
         data = resp.json()
-        # Ollama /api/chat 返回格式: {"message": {"content": "..."}}
-        content = data.get("message", {}).get("content", "")
+        # Ollama /api/chat 返回格式: {"message": {"content": "...", "thinking": "..."}}
+        # qwen3.5思考模式：thinking字段是推理过程，content字段是最终回答
+        msg = data.get("message", {})
+        content = msg.get("content", "")
+
+        # 如果content为空但done_reason是length，说明token不够
         if not content:
-            logger.warning("Ollama返回空内容")
+            done_reason = data.get("done_reason", "")
+            if done_reason == "length":
+                logger.warning(f"Ollama token不足(done_reason=length)，eval_count={data.get('eval_count')}")
+            else:
+                logger.warning("Ollama返回空内容")
             return None
 
         return content

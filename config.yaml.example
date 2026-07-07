@@ -146,7 +146,7 @@ filter:
     api_url: "http://localhost:11434/api/chat"
     model: "qwen3.5:latest"
     max_summary_length: 500
-    timeout: 30
+    timeout: 60
 
 # 通知配置
 notification:
