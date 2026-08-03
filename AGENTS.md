@@ -12,6 +12,7 @@
 - `notifiers/` — 通知模块（飞书 Webhook）
 - `storage/` — 数据存储（SQLite）
 - `utils/` — 工具模块（日志、HTTP客户端）
+- `tests/` — 自动化测试，按模块命名 `test_*.py`；不得调用真实飞书 Webhook
 - `data/` — 运行数据（不进git）
 - `data/backups/` — 数据库迁移前备份（不进git）
 - `data/reports/` — 历史待处理记录等人工审核清单（不进git）

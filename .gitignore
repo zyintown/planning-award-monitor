@@ -1,5 +1,6 @@
 # 敏感配置
 config.yaml
+local.env
 
 # 运行数据（保留目录结构，忽略内容）
 data/*
@@ -19,3 +20,6 @@ venv/
 # IDE
 .vscode/
 .idea/
+
+# 临时文件
+test_result_temp.md

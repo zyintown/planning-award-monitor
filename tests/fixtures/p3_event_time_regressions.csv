@@ -1,0 +1,55 @@
+id,source,title,event_date,event_time_basis,predicted_should_push,事件时点评估结论,case_type
+28,广东省自然资源厅,【置顶】国务院“互联网+督查”平台公开征集阻碍民营经济发展壮大问题线索,2023-07-29,published_at,是,否,prior_false_positive
+29,广东省自然资源厅,【国务院“互联网+督查”平台】关于征集阻碍民营经济发展壮大问题线索的公告,2023-07-29,published_at,是,否,prior_false_positive
+48,中国城市规划协会,行业评优申报系统,2026-07-07,first_seen_at,是,否,prior_false_positive
+49,中国城市规划协会,喜报 | 中国城市规划协会推荐广州市规划院专利项目...,2024-02-01,published_at,是,否,prior_false_positive
+50,中国城市规划协会,2019年度优秀城市规划设计奖,2026-07-07,first_seen_at,是,否,prior_false_positive
+52,广东省国土空间规划协会,032026/06新书推荐 | 《回到县城——新型城镇化背景下的广东县城规划设计》：从历史沉浮到未来新生，解码县域规划的“广东答案”,2026-07-07,first_seen_at,是,否,prior_false_positive
+57,科技部,关于征集2026年度国家科学技术学术著作出版基金项目的通知,2026-06-16,published_at,是,否,prior_false_positive
+81,广东省科技厅,广东省科学技术厅关于征集2026年第一批“粤科专项保”的通知,2026-07-02,published_at,是,否,prior_false_positive
+84,广东省科技厅,广东省科学技术厅关于征集2027年度“普惠科技贷”合作银行的通知,2026-06-26,published_at,是,否,prior_false_positive
+87,广东省科技厅,广东省科学技术厅关于组织申报2027年广东省海外名师项目的通知,2026-06-23,published_at,是,否,prior_false_positive
+92,广东省科技厅,广东省科学技术厅关于征求2026~2027年度广东省重点领域研发计划“智能机器人”专项申报指南意见的通知,2026-06-18,published_at,是,否,prior_false_positive
+94,广东省科技厅,广东省科学技术厅关于征集可面向新疆转移转化科技成果的通知,2026-06-16,published_at,是,否,prior_false_positive
+141,奖项竞赛申报信息库,首都终身教育研究基地开放课题（2026-2027年度）申报公告,2026-07-07,first_seen_at,是,否,prior_false_positive
+142,奖项竞赛申报信息库,四川省科学技术厅、中共四川省委宣传部 关于发布2026年文化和科技产业融合发展试验区 科技攻关联合专项项目申报指南的通知,2026-07-07,first_seen_at,是,否,prior_false_positive
+143,奖项竞赛申报信息库,深圳市科技创新局关于征集2027年度深圳市重点产业研发计划“深圳-新加坡联合研发资助项目”备选课题的通知,2026-07-07,first_seen_at,是,否,prior_false_positive
+144,奖项竞赛申报信息库,厦门市科学技术局厦门市农业农村局关于发布2026年厦门市科技计划项目（长周期种子种苗领域）申报指南的通知,2026-07-07,first_seen_at,是,否,prior_false_positive
+145,奖项竞赛申报信息库,关于做好2026年度浙江省省级智库课题（第一批）申报工作的通知,2026-07-07,first_seen_at,是,否,prior_false_positive
+146,奖项竞赛申报信息库,2026年度河北省社会科学基金项目申报公告,2026-07-07,first_seen_at,是,否,prior_false_positive
+149,奖项竞赛申报信息库,关于征集中国化学会科普专家的通知,2026-07-07,first_seen_at,是,否,prior_false_positive
+150,奖项竞赛申报信息库,"关于开展2026上海""U35”青年创意设计人才申报工作的通知",2026-07-07,first_seen_at,是,否,prior_false_positive
+151,奖项竞赛申报信息库,福州市社会科学界联合会关于推荐福州市社科专家库人选的通知,2026-07-07,first_seen_at,是,否,prior_false_positive
+152,奖项竞赛申报信息库,关于征集2026年度湖北省评标专家库襄阳区域库评标专家的通知,2026-07-07,first_seen_at,是,否,prior_false_positive
+153,奖项竞赛申报信息库,关于开展2026年度景德镇市科技专家库专家征集及在库专家信息更新工作的通知,2026-07-07,first_seen_at,是,否,prior_false_positive
+154,奖项竞赛申报信息库,邢台市科学技术局关于征集科技专家（加计扣除政策专家）的通知,2026-07-07,first_seen_at,是,否,prior_false_positive
+155,奖项竞赛申报信息库,2026年安徽省公共资源交易评标评审专家入库征集公告,2026-07-07,first_seen_at,是,否,prior_false_positive
+156,奖项竞赛申报信息库,娄底市科学技术局关于面向社会征集娄底市科技专家库专家的通知,2026-07-07,first_seen_at,是,否,prior_false_positive
+157,奖项竞赛申报信息库,关于2026年度新疆维吾尔自治区科学技术奖提名工作的通知,2026-07-07,first_seen_at,是,否,prior_false_positive
+158,奖项竞赛申报信息库,关于推荐及评选第十六届周培源物理奖的通知,2026-07-07,first_seen_at,是,否,prior_false_positive
+159,奖项竞赛申报信息库,关于申报第十五届（2026年）“上海科普教育创新奖”的通知,2026-07-07,first_seen_at,是,否,prior_false_positive
+160,奖项竞赛申报信息库,关于推荐及评选第三届蔡诗东等离子体物理奖的通知,2026-07-07,first_seen_at,是,否,prior_false_positive
+161,奖项竞赛申报信息库,2026年度CAA科学技术奖励推荐工作启动,2026-07-07,first_seen_at,是,否,prior_false_positive
+167,奖项竞赛申报信息库,关于推荐及评选第五届中国物理学会萨本栋应用物理奖的通知,2026-07-07,first_seen_at,是,否,prior_false_positive
+168,奖项竞赛申报信息库,关于推荐及评选第十一届中国物理学会谢希德物理奖（女物理工作者）的通知,2026-07-07,first_seen_at,是,否,prior_false_positive
+170,奖项竞赛申报信息库,关于第十三届中国化学会-英国皇家化学会青年化学奖推荐/申请工作的通知,2026-07-07,first_seen_at,是,否,prior_false_positive
+171,奖项竞赛申报信息库,关于2026年度中国化学会青年化学奖推荐/申请工作的通知,2026-07-07,first_seen_at,是,否,prior_false_positive
+172,奖项竞赛申报信息库,上海市档案局办公室关于申报2026年度上海市档案科技研究成果奖励项目的通知,2026-07-07,first_seen_at,是,否,prior_false_positive
+173,奖项竞赛申报信息库,中国腐蚀与防护学会关于开展“青年科学家奖”提名推荐工作的通知,2026-07-07,first_seen_at,是,否,prior_false_positive
+174,奖项竞赛申报信息库,福建省农学会关于组织2024-2025年度神农福建农业科技奖推荐工作的通知,2026-07-07,first_seen_at,是,否,prior_false_positive
+175,奖项竞赛申报信息库,关于开展辽宁省哲学社会科学奖·成就奖（第五届）申报工作的通知,2026-07-07,first_seen_at,是,否,prior_false_positive
+176,奖项竞赛申报信息库,江苏省科技厅关于2025年度江苏省科学技术奖提名工作的通知,2026-07-07,first_seen_at,是,否,prior_false_positive
+619,中国城市规划学会,关于开展2026年度中国城市规划学会科技进步奖推荐工作的通知,2026-07-09,first_seen_at,是,否,prior_false_positive
+655,中国城市规划学会,关于开展2023-2024年度中国城市规划学会科学技术奖推荐工作的通知,2026-07-09,first_seen_at,是,否,prior_false_positive
+694,中国城市规划协会,规划师看城市 ｜中国城市规划协会第二届“人·设计·城”摄影大赛期待你的参与！,2025-07-17,published_at,否,是,prior_false_negative
+735,中国自然资源学会,关于开展2023年度自然资源科学技术奖推荐工作的通知,2024-04-11,published_at,是,否,prior_false_positive
+740,中国自然资源学会,关于开展2022年度自然资源科学技术奖推荐工作的通知,2023-06-09,published_at,是,否,prior_false_positive
+898,中国风景园林学会,"第三届全国园林行业职业技能竞赛
+花艺环境设计师职业技能竞赛延期报名的通知",2026-06-24,published_at,否,是,prior_false_negative
+912,中国风景园林学会,2026年度“孟兆祯风景园林奖”提名与首届“孟兆祯风景园林青年教育奖”申报工作启动,2026-04-29,published_at,否,是,prior_false_negative
+921,中国风景园林学会,"第三届全国园林行业职业技能竞赛
+暨2026年“原野杯”绿化造园工职业技能竞赛（第三次通知）",2026-03-13,published_at,否,是,prior_false_negative
+922,中国风景园林学会,第四届全国创新争先奖候选人启动推荐,2026-03-12,published_at,否,是,prior_false_negative
+923,中国风景园林学会,第三届全国园林行业职业技能竞赛暨2026年“原野杯”绿化造园工职业技能竞赛延期报名的通知,2026-03-10,published_at,否,是,prior_false_negative
+993,中国风景园林学会,关于征集2025年中国风景园林学会大学生设计竞赛的通知,2025-07-11,published_at,否,是,prior_false_negative
+998,微信公众号:中国城市规划,"全体规划人请注意,中国城市规划学会年末大礼包来了",2021-03-04,published_at,是,否,prior_false_positive

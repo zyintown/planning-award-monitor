@@ -37,7 +37,8 @@ class FeedddFallbackCrawler(BaseCrawler):
             logger.warning(f"feeddd搜索异常: {self.keyword} - {type(e).__name__}: {e}")
             return []
 
-    def _request_page(self) -> str | None:
+    def _request_page(self, url: str = None) -> str | None:
+        # feeddd自行构造搜索URL，忽略传入的url参数
         search_url = FEEDDD_SEARCH_URL.format(self.keyword)
         crawler_config = self.config.get("crawler", {})
         return fetch_html(

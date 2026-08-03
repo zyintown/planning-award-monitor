@@ -6,103 +6,245 @@
 sources:
   websites:
     # 政府主管部门
-    - name: "住房和城乡建设部"
-      url: "https://www.mohurd.gov.cn/jjbzgg/index.html"
-      type: "gov_general"
-      enabled: true
+    - name: 住房和城乡建设部
+      url: https://www.mohurd.gov.cn/zhengcefabu/
+      type: gov_general
+      enabled: false  # 官网上无报奖信息，该栏目只有政策发布
 
-    - name: "广东省住房和城乡建设厅"
-      url: "https://zfcxjst.gd.gov.cn/xxgk/wjtz/index.html"
-      type: "gov_general"
+    - name: 广东省住房和城乡建设厅
+      url: https://zfcxjst.gd.gov.cn/xxgk/gsgg/index.html
+      type: gov_general
       enabled: true
+      pagination:
+        mode: construct
+        url_template: https://zfcxjst.gd.gov.cn/xxgk/gsgg/index_{n}.html
+        first_page_url: https://zfcxjst.gd.gov.cn/xxgk/gsgg/index.html
+        n_start: 2
+        n_step: 1
 
-    - name: "自然资源部"
-      url: "https://www.mnr.gov.cn/channels/213.aspx"
-      type: "gov_general"
+    - name: 自然资源部
+      url: https://www.mnr.gov.cn/gk/tzgg/index.html
+      type: gov_general
       enabled: true
+      pagination:
+        mode: construct
+        url_template: https://www.mnr.gov.cn/gk/tzgg/index_{n}.html
+        first_page_url: https://www.mnr.gov.cn/gk/tzgg/index.html
+        n_start: 1
+        n_step: 1
+        selectors:
+          - div.kyy_textR a
+        allowed_domains:
+          - mnr.gov.cn
 
-    - name: "广东省自然资源厅"
-      url: "https://nr.gd.gov.cn/zwgknew/tzgg/gg/index.html"
-      type: "gov_general"
+    - name: 广东省自然资源厅
+      url: https://nr.gd.gov.cn/zwgknew/tzgg/tz/index.html
+      type: gov_general
       enabled: true
+      pagination:
+        mode: construct
+        url_template: https://nr.gd.gov.cn/zwgknew/tzgg/tz/index_{n}.html
+        first_page_url: https://nr.gd.gov.cn/zwgknew/tzgg/tz/index.html
+        n_start: 2
+        n_step: 1
 
-    - name: "广州市规划和自然资源局"
-      url: "https://ghzyj.gz.gov.cn/gkmlpt/tzgg"
-      type: "gov_general"
+    - name: 广州市规划和自然资源局
+      url: https://ghzyj.gz.gov.cn/xwzx/tzgg/index.html
+      type: gov_general
       enabled: true
+      pagination:
+        mode: construct
+        url_template: https://ghzyj.gz.gov.cn/xwzx/tzgg/index_{n}.html
+        first_page_url: https://ghzyj.gz.gov.cn/xwzx/tzgg/index.html
+        n_start: 2
+        n_step: 1
+        selectors:
+          - div.common_list a
 
     # 行业学会/协会
-    - name: "中国城市规划学会"
-      url: "https://www.planning.org.cn/newslist?type=1"
-      type: "org_general"
+    - name: 中国城市规划学会
+      url: https://www.planning.org.cn/solicity/inform?page=1
+      type: org_general
       enabled: true
+      pagination:
+        mode: construct
+        url_template: https://www.planning.org.cn/solicity/inform?page={n}
+        n_start: 1
+        n_step: 1
 
-    - name: "中国城市规划协会"
-      url: "http://www.cacp.org.cn/tzgg/index.jhtml"
-      type: "org_general"
+    - name: 中国城市规划协会
+      url: https://www.cacp.org.cn/listContent.jspx?siteId=1&channelId=491&orderBy=4&pageNo=1&pageSize=7
+      type: cacp_api
       enabled: true
+      max_pages: 10
+      pagination:
+        mode: construct
+        url_template: https://www.cacp.org.cn/listContent.jspx?siteId=1&channelId=491&orderBy=4&pageNo={n}&pageSize=7
+        n_start: 1
+        n_step: 1
 
-    - name: "广东省城市规划协会"
-      url: "https://www.gdplan.com/"
-      type: "org_general"
-      enabled: true
+    - name: 广东省城市规划协会
+      url: https://www.gdplan.com/
+      type: org_general
+      enabled: false  # 网站已无法访问
 
-    - name: "中国自然资源学会"
-      url: "http://www.csnr.org/"
-      type: "org_general"
+    - name: 中国自然资源学会
+      url: https://www.csnr.org.cn/list.html?id=20
+      type: org_general
+      source_tier: official_website
       enabled: true
+      pagination:
+        mode: none
+        selectors:
+          - ul.rightNews a
 
-    - name: "广东省国土空间规划协会"
-      url: "https://www.gdtspa.org.cn/news/35"
-      type: "org_general"
+    - name: 中国自然资源学会（新闻栏目）
+      url: https://www.csnr.org.cn/list.html?id=37
+      type: org_general
+      source_tier: official_website
       enabled: true
+      pagination:
+        mode: none
+        selectors:
+          - ul.rightNews a
+
+    - name: 广东省土地学会
+      url: https://www.gdtdxh.org.cn/
+      type: org_general
+      source_tier: official_website
+      enabled: true
+      pagination:
+        mode: none
+
+    - name: 广东省国土空间规划协会
+      url: https://www.gdtspa.org.cn/news/35/1
+      type: org_general
+      enabled: true
+      ssl_verify: false  # SSL 证书过期，待网站续证书后可删除此行
+      pagination:
+        mode: construct
+        url_template: https://www.gdtspa.org.cn/news/35/{n}
+        n_start: 1
+        n_step: 1
+        selectors:
+          - a.TrendsTag
 
     # 科技奖渠道
-    - name: "科技部"
-      url: "https://www.most.gov.cn/tztg/"
-      type: "gov_general"
+    - name: 科技部
+      url: https://www.most.gov.cn/tztg/
+      type: gov_general
       enabled: true
+      pagination:
+        mode: construct
+        url_template: https://www.most.gov.cn/tztg/index_{n}.html
+        first_page_url: https://www.most.gov.cn/tztg/
+        n_start: 1
+        n_step: 1
 
-    - name: "广东省科技厅"
-      url: "https://gdstc.gd.gov.cn/zwgk_n/tzgg/"
-      type: "gov_general"
+    - name: 广东省科技厅
+      url: https://gdstc.gd.gov.cn/zwgk_n/tzgg/index.html
+      type: gov_general
       enabled: true
+      pagination:
+        mode: construct
+        url_template: https://gdstc.gd.gov.cn/zwgk_n/tzgg/index_{n}.html
+        first_page_url: https://gdstc.gd.gov.cn/zwgk_n/tzgg/index.html
+        n_start: 2
+        n_step: 1
+        selectors:
+          - div.newsList ul.list a
 
-    # 其他
-    - name: "华夏建设科学技术奖励委员会"
-      url: "https://www.chinagb.net/"
-      type: "org_general"
+    - name: 华夏建设科学技术奖励委员会
+      url: http://www.huaxiajiang.org.cn/
+      type: org_general
       enabled: true
+      pagination:
+        mode: none
 
-    - name: "中国风景园林学会"
-      url: "http://www.chsla.org.cn/"
-      type: "org_general"
+    - name: 中国风景园林学会
+      url: https://pcweb.xiehuiyi.com/pcWeb/infoApp/article/list?categorySns=1302&size=20&page=1&branchId=0
+      type: chsla_api
       enabled: true
+      pagination:
+        mode: construct
+        url_template: https://pcweb.xiehuiyi.com/pcWeb/infoApp/article/list?categorySns=1302&size=20&page={n}&branchId=0
+        n_start: 1
+        n_step: 1
 
-    - name: "奖项竞赛申报信息库"
-      url: "http://www.funresearch.cn/award/index"
-      type: "org_general"
+    - name: 奖项竞赛申报信息库
+      url: http://www.funresearch.cn/award/index
+      type: org_general
+      source_tier: aggregator
       enabled: true
+      pagination:
+        mode: none
+      industry_keywords:
+        - 城乡规划
+        - 国土规划
+        - 城市规划
+        - 空间规划
+        - 城乡
+        - 国土
+        - 建设
+        - 建筑
+        - 园林
+        - 风景
+        - 城市设计
+        - 自然资源
+        - 测绘
+        - 地理
+        - 人居
+        - 村镇
+        - 住建
+        - 市政
+        - 生态
+        - 环境
+        - 文物
+        - 遗产
+        - 景观
 
   # 微信公众号（通过搜狗微信搜索）
   wechat_accounts:
-    - name: "中国城市规划学会"
-      keyword: "中国城市规划学会"
+    - name: 中国城市规划学会
+      keyword: 中国城市规划学会
+      account_aliases:
+        - 中国城市规划
       enabled: true
-    - name: "中国城市规划协会"
-      keyword: "中国城市规划协会"
+    - name: 中国城市规划协会
+      keyword: 中国城市规划协会
       enabled: true
-    - name: "广东省国土空间规划协会"
-      keyword: "广东省国土空间规划协会"
+    - name: 广东省国土空间规划协会
+      keyword: 广东省国土空间规划协会
       enabled: true
-    - name: "中国自然资源学会"
-      keyword: "中国自然资源学会"
+    - name: 中国自然资源学会
+      keyword: 中国自然资源学会
+      account_aliases:
+        - 中国自然资源学会信息平台
+      source_tier: official_wechat
       enabled: true
-    - name: "华夏建设科学技术奖励委员会"
-      keyword: "华夏建设科学技术奖"
+    - name: 资源中国
+      keyword: 资源中国
+      source_tier: official_wechat
+      enabled: false  # 单账号搜索关键词过泛；保留为主题检索账号白名单
+      topic_match_enabled: true
+    - name: 中国地质矿产经济
+      keyword: 中国地质矿产经济
+      source_tier: official_wechat
       enabled: true
-    - name: "中国风景园林学会"
-      keyword: "中国风景园林学会"
+    - name: 中国测绘学会
+      keyword: 中国测绘学会
+      source_tier: official_wechat
+      enabled: true
+    - name: 中国土地学会订阅号
+      keyword: 中国土地学会订阅号
+      source_tier: official_wechat
+      enabled: true
+    - name: 华夏建设科学技术奖励委员会
+      keyword: 华夏建设科学技术奖
+      enabled: false  # 搜狗仅命中转发账号；保留为主题检索账号白名单
+      topic_match_enabled: true
+    - name: 中国风景园林学会
+      keyword: 中国风景园林学会
       enabled: true
 
 # 筛选配置
@@ -116,6 +258,7 @@ filter:
     - 评选表彰
     - 报名
     - 征集
+    - 竞赛
     - 科学技术奖
     - 优秀规划
     - 优秀设计
@@ -140,29 +283,54 @@ filter:
     - 继续教育
     - 注册城乡规划师
 
-  # AI二次确认（本地Ollama）
+  # AI二次确认（Agnes优先，本地Ollama fallback）
   ai:
     enabled: true
-    api_url: "http://localhost:11434/api/chat"
-    model: "qwen3.5:latest"
-    max_summary_length: 500
+    provider: agnes
+    api_url: https://api.agnes-ai.cn/v1/chat/completions
+    model: agnes-2.5-flash
+    api_key_file: local.env
+    fallback:
+      provider: ollama
+      api_url: http://localhost:11434/api/chat
+      model: qwen3.5:latest
+    max_summary_length: 5000
     timeout: 60
+    max_workers: 1  # 先用 benchmark_ai.py 验证，再决定是否提高到2或4
 
-# 通知配置
+# 通知配置（飞书 Webhook）
 notification:
-  pushplus:
-    token: "在此填入你的PushPlus Token"
-    topic: ""
+  aggregator_delay_hours: 24
+  feishu:
+    webhook_url: https://open.feishu.cn/open-apis/bot/v2/hook/你的webhook-id
+    secret: ''  # 加签密钥，如未开启加签则留空
 
 # 存储配置
 storage:
-  db_path: "data/monitor.db"
+  db_path: data/monitor.db
   dedup_days: 90
+
+# 渠道健康监测
+health:
+  # 同一渠道连续失败达到该次数时，发送一次飞书告警；恢复后重新计数
+  failure_alert_threshold: 3
+  # 仅当本次全量抓取的所有渠道均失败时，按分钟等待后重试
+  all_failed_retry_delays_minutes: [30, 90]
+  # 看门狗由独立计划任务调用；本配置不会自动注册新任务
+  watchdog:
+    grace_minutes: 90
+    schedules:
+      - name: morning
+        hour: 9
+        minute: 0
+      - name: evening
+        hour: 21
+        minute: 0
 
 # 日志配置
 logging:
-  level: "INFO"
-  dir: "logs"
+  level: INFO
+  dir: logs
   max_days: 30
 
 # 爬虫配置
@@ -170,4 +338,31 @@ crawler:
   timeout: 15
   retry_times: 3
   retry_delay: 2
-  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+  max_pages: 5
+  user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36
+
+  # 公众号保留最近3天结果；日期无法识别的文章保守保留
+  wechat:
+    backfill_days: 3
+    interval_seconds: 3
+    topic_search:
+      enabled: true
+      max_pages: 2
+      interval_seconds: 3
+      queries:
+        - "{year} 自然资源科学技术奖 推荐"
+        - "{year} 科学技术奖 申报 推荐"
+        - "{year} 规划 奖项 申报 征集"
+
+    # SSL 证书过期或自签名的域名在此列出，将跳过验证
+  ssl_skip_domains:
+    - gdtspa.org.cn
+
+  # 仅对去重后的新增文章抓取详情页，补充摘要和正文后再筛选
+  detail:
+    enabled: true
+    timeout: 15
+    retry_times: 2
+    min_existing_length: 120
+    max_content_length: 5000
+    summary_length: 500
